@@ -38,4 +38,10 @@ public class Article {
 	public void setPrix(double prix) {
 		this.prix = prix;
 	}
+	
+	public String toString() {
+		return("Référence article: "+reference
+				+"\nIntitulé: "+intitule
+				+"\nPrix: "+prix+"€");
+	}
 }

@@ -12,7 +12,7 @@ public class Coque extends Accessoire{
 	}
 	
 	public Coque(int reference, String intitule, double prix,
-			List<Telephone> tels, Couleur couleur) {
+			List<String> tels, Couleur couleur) {
 		super(reference, intitule, prix, tels);
 		this.couleur = couleur;
 	}
@@ -23,7 +23,7 @@ public class Coque extends Accessoire{
 	}
 	
 	public Coque(int reference, String intitule, double prix,
-			List<Telephone> tels) {
+			List<String> tels) {
 		super(reference, intitule, prix, tels);
 		this.couleur = Couleur.black;
 	}

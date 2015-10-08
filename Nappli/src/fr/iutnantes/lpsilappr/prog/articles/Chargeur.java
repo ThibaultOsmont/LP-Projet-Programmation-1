@@ -12,7 +12,7 @@ public class Chargeur extends Accessoire{
 	}
 	
 	public Chargeur(int reference, String intitule, double prix,
-			List<Telephone> tels, Type t) {
+			List<String> tels, Type t) {
 		super(reference, intitule, prix, tels);
 		this.setType(t);
 	}
@@ -23,7 +23,7 @@ public class Chargeur extends Accessoire{
 	}
 	
 	public Chargeur(int reference, String intitule, double prix,
-			List<Telephone> tels) {
+			List<String> tels) {
 		super(reference, intitule, prix, tels);
 		this.setType(Type.usb);
 	}
@@ -34,6 +34,12 @@ public class Chargeur extends Accessoire{
 
 	public void setType(Type type) {
 		this.type = type;
+	}
+	
+	@Override
+	public String toString() {
+		return (super.toString()
+				+"\n");
 	}
 
 }

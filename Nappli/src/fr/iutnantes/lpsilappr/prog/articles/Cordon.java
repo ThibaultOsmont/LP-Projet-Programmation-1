@@ -13,7 +13,7 @@ public class Cordon extends Accessoire{
 	}
 	
 	public Cordon(int reference, String intitule, double prix,
-			List<Telephone> tels, int longueur) {
+			List<String> tels, int longueur) {
 		super(reference, intitule, prix, tels);
 		this.setLongueur(longueur);
 	}
@@ -24,7 +24,7 @@ public class Cordon extends Accessoire{
 	}
 	
 	public Cordon(int reference, String intitule, double prix,
-			List<Telephone> tels) {
+			List<String> tels) {
 		super(reference, intitule, prix, tels);
 		this.setLongueur(50);
 	}
