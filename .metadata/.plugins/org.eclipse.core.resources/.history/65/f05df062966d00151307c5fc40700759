@@ -2,18 +2,18 @@ package fr.iutnantes.lpsilappr.prog.articles;
 
 public class Telephone extends Article{
 
-	private Operateur operateur;
+	private String operateur;
 	
-	public Telephone(Operateur operateur, int reference, String intitule, double prix) {
+	public Telephone(String operateur, int reference, String intitule, double prix) {
 		super(reference, intitule, prix);
 		this.operateur = operateur;
 	}
 
 	public String getOperateur() {
-		return operateur.toString();
+		return operateur;
 	}
 
-	public void setOperateur(Operateur operateur) {
+	public void setOperateur(String operateur) {
 		this.operateur = operateur;
 	}
 
