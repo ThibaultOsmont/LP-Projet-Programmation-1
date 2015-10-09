@@ -2,7 +2,8 @@ package fr.iutnantes.lpsilappr.prog.articles;
 
 import java.util.List;
 import java.util.ArrayList;
-
+import java.util.Collections;
+import static java.util.Comparator.comparing;
 
 public class ListeArticles {
 	
@@ -37,6 +38,28 @@ public class ListeArticles {
 	}
 	
 	public void tousLesArticles_ParRef() {
+		//Tri de la liste d'articles: cetteméthode ne renvoie rien mais
+		//trie directement laliste existante
+		Collections.sort(articles, comparing(Article::getReference));
 		
+		for(Article art:articles) {
+			System.out.println(art+"\n");
+		}
+	}
+	
+	public void tousLesArticles_ParIntitule() {
+		Collections.sort(articles, comparing(Article::getIntitule));
+		
+		for(Article art:articles) {
+			System.out.println(art+"\n");
+		}
+	}
+	
+	public void tousLesArticles_ParPrix(){
+		Collections.sort(articles, comparing(Article::getPrix));
+		
+		for(Article art:articles) {
+			System.out.println(art+"\n");
+		}
 	}
 }
