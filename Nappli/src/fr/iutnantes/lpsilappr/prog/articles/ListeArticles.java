@@ -3,6 +3,8 @@ package fr.iutnantes.lpsilappr.prog.articles;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
+
 import static java.util.Comparator.comparing;
 
 import java.io.FileWriter;
@@ -68,9 +70,17 @@ public class ListeArticles {
 	
 	public void sauvegarde() {
 		try {
-			FileWriter fw = new FileWriter("");
+
+			FileWriter fw = new FileWriter("C:/Users/Thibault/Desktop/Articles Sauvegardés.txt");
+			Iterator<Article> it = articles.iterator();
+			
+			while(it.hasNext()) {
+				fw.write(it.next().toString());
+				if(it.hasNext()) fw.write("\n");
+			}
+			fw.close();
+
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
