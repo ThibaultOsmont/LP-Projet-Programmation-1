@@ -39,6 +39,7 @@ public class Article {
 		this.prix = prix;
 	}
 	
+	@Override
 	public String toString() {
 		return("Référence article: "+reference
 				+"\nIntitulé: "+intitule

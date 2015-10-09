@@ -35,4 +35,8 @@ public class ListeArticles {
 	public boolean supprimerArticle(Article a) {
 		return articles.remove(a);
 	}
+	
+	public void tousLesArticles_ParRef() {
+		
+	}
 }

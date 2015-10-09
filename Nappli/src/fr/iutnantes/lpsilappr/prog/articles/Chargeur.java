@@ -39,7 +39,7 @@ public class Chargeur extends Accessoire{
 	@Override
 	public String toString() {
 		return (super.toString()
-				+"\n");
+				+"\nType du chargeur: "+type);
 	}
 
 }

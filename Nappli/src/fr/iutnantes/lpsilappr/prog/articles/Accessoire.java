@@ -26,6 +26,7 @@ public class Accessoire extends Article{
 		this.telephonesCompatibles = telephonesCompatibles;
 	}
 	
+	@Override
 	public String toString() {
 		String telCompatibles = "";
 		Iterator<String> it = telephonesCompatibles.iterator();

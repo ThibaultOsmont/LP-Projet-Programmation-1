@@ -17,4 +17,9 @@ public class Telephone extends Article{
 		this.operateur = operateur;
 	}
 
+	@Override
+	public String toString() {
+		return (super.toString()
+				+"\nVendu par l'opérateur "+operateur);
+	}
 }

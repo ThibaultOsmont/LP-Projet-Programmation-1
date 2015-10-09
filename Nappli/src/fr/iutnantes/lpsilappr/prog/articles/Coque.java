@@ -35,4 +35,10 @@ public class Coque extends Accessoire{
 	public void setCouleur(Couleur couleur) {
 		this.couleur = couleur;
 	}
+	
+	@Override
+	public String toString() {
+		return(super.toString()
+				+"\nCouleur: "+couleur);
+	}
 }
