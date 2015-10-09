@@ -76,11 +76,12 @@ public class ListeArticles {
 			
 			while(it.hasNext()) {
 				fw.write(it.next().toString());
-				if(it.hasNext()) fw.write("\n");
+				if(it.hasNext()) fw.write("\n\n");
 			}
 			fw.close();
 
 		} catch (IOException e) {
+			System.out.println("Pour fonctionner, Le fichier portant exactement ce nom: \"Articles Sauvegardés.txt\" doit être créé dans le répertoire indiqué dans la trace de la pile ci-dessous.");
 			e.printStackTrace();
 		}
 	}
