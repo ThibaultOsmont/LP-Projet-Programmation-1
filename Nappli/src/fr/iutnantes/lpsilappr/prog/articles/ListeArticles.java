@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import static java.util.Comparator.comparing;
 
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class ListeArticles {
 	
 	private List<Article> articles;
@@ -60,6 +63,15 @@ public class ListeArticles {
 		
 		for(Article art:articles) {
 			System.out.println(art+"\n");
+		}
+	}
+	
+	public void sauvegarde() {
+		try {
+			FileWriter fw = new FileWriter("");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 }
