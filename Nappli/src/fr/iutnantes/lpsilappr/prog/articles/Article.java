@@ -1,6 +1,6 @@
 package fr.iutnantes.lpsilappr.prog.articles;
 
-public class Article {
+public abstract class Article {
 
 	private int reference;
 	private String intitule;

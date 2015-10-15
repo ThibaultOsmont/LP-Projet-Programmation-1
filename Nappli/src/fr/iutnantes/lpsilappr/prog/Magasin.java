@@ -1,11 +1,21 @@
 package fr.iutnantes.lpsilappr.prog;
 
 import fr.iutnantes.lpsilappr.prog.articles.*;
-import java.util.*;
+import javax.swing.*;
 
-public class Magasin {
+
+public class Magasin extends java.awt.Frame {
+	public Magasin() {
+	}
+	
+	/**
+	 * generated serial uid 
+	 */
+	private static final long serialVersionUID = -5020553266812937903L;
+
+
 	public static void main(String[] args) {
-		Chargeur c = new Chargeur(42, "chargeur", 2, Type.allumsig);
+		Chargeur c = new Chargeur(42, "chargeur", 2, fr.iutnantes.lpsilappr.prog.articles.Type.allumsig);
 		System.out.println(c.getType());
 		
 		ListeArticles arts = new ListeArticles();
