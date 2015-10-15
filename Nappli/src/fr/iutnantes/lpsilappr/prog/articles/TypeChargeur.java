@@ -1,13 +1,13 @@
 package fr.iutnantes.lpsilappr.prog.articles;
 
-public enum Type {
+public enum TypeChargeur {
 	secteur ("Secteur"),
 	usb ("USB"),
 	allumsig ("Allume-cigare");
 	
 	private String type = "";
 	
-	private Type(String type) {
+	private TypeChargeur(String type) {
 		this.type = type;
 	}
 	

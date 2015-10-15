@@ -37,9 +37,9 @@ public class Cordon extends Accessoire{
 		this.longueur = longueur;
 	}
 
-	@Override
+	/*@Override
 	public String toString() {
 		return(super.toString()
 				+"\nLongueur du cable: "+longueur+"cm");
-	}
+	}*/
 }

@@ -41,8 +41,9 @@ public abstract class Article {
 	
 	@Override
 	public String toString() {
-		return("Référence article: "+reference
+		/*return("Référence article: "+reference
 				+"\nIntitulé: "+intitule
-				+"\nPrix: "+prix+"€");
+				+"\nPrix: "+prix+"€");*/
+		return this.intitule;
 	}
 }

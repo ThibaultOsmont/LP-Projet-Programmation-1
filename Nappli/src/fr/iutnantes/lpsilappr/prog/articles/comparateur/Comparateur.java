@@ -25,7 +25,7 @@ public abstract class Comparateur {
 	public static final Comparator<Article> REF = new Comparator<Article>() {
 		@Override
 		public int compare(Article a1, Article a2) {
-			return ((String)a1.getIntitule()).compareTo(a2.getIntitule());
+			return ((Integer)a1.getReference()).compareTo(a2.getReference());
 		}
 	};
 }
