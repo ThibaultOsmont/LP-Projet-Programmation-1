@@ -70,6 +70,10 @@ public class ListeArticles {
 		}
 	}
 	
+	public boolean isEmpty() {
+		return articles.isEmpty();
+	}
+	
 	public void sauvegarde() {
 		try {
 
