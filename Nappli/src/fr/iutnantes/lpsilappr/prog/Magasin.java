@@ -78,10 +78,17 @@ public class Magasin {
 		triArticles.setBounds(12, 13, 113, 16);
 		frame.getContentPane().add(triArticles);
 		
-		JList<Object> list = new JList<Object>(articles.getArticles().toArray());
-		list.setBounds(309, 78, 1, 1);
-		frame.getContentPane().add(list);
+		System.out.println(articles.isEmpty());
 		
+		/*JList<Object> list = new JList<Object>(articles.getArticles().toArray());
+		list.setBounds(309, 78, 1, 1);
+		frame.getContentPane().add(list);*/
+		
+		String array[] = {"taras", "tarasdemerde"};	
+		JList l2 = new JList(array);
+		l2.setVisible(true);
+		l2.setBounds(309, 78, 1, 1);
+		frame.getContentPane().add(l2);
 	}
 	
 	/*
