@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -19,11 +20,6 @@ import fr.iutnantes.lpsilappr.prog.articles.TypeChargeur;
 import fr.iutnantes.lpsilappr.prog.controleurs.MyActionListener;
 import fr.iutnantes.lpsilappr.prog.controleurs.MyItemListener;
 import fr.iutnantes.lpsilappr.prog.controleurs.MyListSelectionListener;
-
-import javax.swing.JTextField;
-import javax.swing.JTextArea;
-import javax.swing.JTextPane;
-import javax.swing.JButton;
 
 public class Magasin {
 

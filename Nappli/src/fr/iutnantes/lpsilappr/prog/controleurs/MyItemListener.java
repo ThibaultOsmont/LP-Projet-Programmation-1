@@ -1,12 +1,11 @@
 package fr.iutnantes.lpsilappr.prog.controleurs;
 
 import java.awt.event.ItemEvent;
-
-import javax.swing.JComboBox;
-import javax.swing.JFrame;
-import javax.swing.JList;
 import java.awt.event.ItemListener;
 import java.util.List;
+
+import javax.swing.JComboBox;
+import javax.swing.JList;
 
 import fr.iutnantes.lpsilappr.prog.Magasin;
 import fr.iutnantes.lpsilappr.prog.articles.Article;

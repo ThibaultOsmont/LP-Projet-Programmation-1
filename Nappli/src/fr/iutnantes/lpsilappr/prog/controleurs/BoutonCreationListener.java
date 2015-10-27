@@ -6,8 +6,6 @@ import java.awt.event.ActionListener;
 import javax.swing.JDialog;
 import javax.swing.JTextField;
 
-import fr.iutnantes.lpsilappr.prog.articles.Article;
-
 public class BoutonCreationListener implements ActionListener {
 
 	private JDialog dialog;
