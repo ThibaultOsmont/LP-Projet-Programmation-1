@@ -3,24 +3,42 @@ package fr.iutnantes.lpsilappr.prog;
 import java.awt.Dimension;
 import java.awt.EventQueue;
 import java.util.ArrayList;
+import java.util.List;
 
-import javax.swing.JFrame;
 import javax.swing.JComboBox;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JList;
 
-import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
-
+import fr.iutnantes.lpsilappr.prog.articles.Article;
 import fr.iutnantes.lpsilappr.prog.articles.Chargeur;
 import fr.iutnantes.lpsilappr.prog.articles.ListeArticles;
 import fr.iutnantes.lpsilappr.prog.articles.Operateur;
 import fr.iutnantes.lpsilappr.prog.articles.Telephone;
 import fr.iutnantes.lpsilappr.prog.articles.TypeChargeur;
-import javax.swing.JList;
+import fr.iutnantes.lpsilappr.prog.controleurs.MyActionListener;
+import fr.iutnantes.lpsilappr.prog.controleurs.MyItemListener;
+import fr.iutnantes.lpsilappr.prog.controleurs.MyListSelectionListener;
+
+import javax.swing.JTextField;
+import javax.swing.JTextArea;
+import javax.swing.JTextPane;
+import javax.swing.JButton;
 
 public class Magasin {
 
+	/**
+	 * Composants soumis à modifications 
+	 */
 	private ListeArticles articles = new ListeArticles();
 	private JFrame frame;
+	private JComboBox<Object> methodeTriArticles;
+	private JList<Object> listeArticles;
+	private JLabel ref;
+	private JLabel intitule;
+	private JLabel prix;
+	private JLabel label_2;
+	private JLabel label_3;
 
 	/**
 	 * Launch the application.
@@ -67,28 +85,56 @@ public class Magasin {
 		/*
 		 * liste des articles triés
 		 */
-		JComboBox<Object> listeDesArticles = new JComboBox<Object>(methodeTri.toArray());
-		listeDesArticles.setBounds(12, 43, 120, 22);
-		frame.getContentPane().add(listeDesArticles);
+		this.methodeTriArticles = new JComboBox<Object>(methodeTri.toArray());
+		methodeTriArticles.setBounds(12, 43, 120, 22);
+		
 		
 		/*
 		 * label méthode de tri des articles
 		 */ 
 		JLabel triArticles = new JLabel("Trier articles selon");
 		triArticles.setBounds(12, 13, 113, 16);
+		
+		this.listeArticles = new JList<Object>(articles.getArticles().toArray());
+		listeArticles.setBounds(470, 12, 300, 500);
+		
+		ref = new JLabel("");
+		ref.setBounds(12, 115, 308, 16);
+		
+		this.intitule = new JLabel("");
+		this.intitule.setBounds(12, 144, 308, 16);
+		
+		this.prix = new JLabel("");
+		this.prix.setBounds(12, 178, 308, 16);
+
+		label_2 = new JLabel("");
+		label_2.setBounds(12, 217, 308, 16);		
+		
+		label_3 = new JLabel("");
+		label_3.setBounds(12, 264, 308, 16);
+		
+		JButton btnAjouterUnArticle = new JButton("Ajouter un article");
+		btnAjouterUnArticle.setBounds(223, 42, 131, 25);
+		
+		/*
+		 * Ajout des controleurs
+		 */
+		methodeTriArticles.addItemListener(new MyItemListener(this, methodeTriArticles, listeArticles, articles.getArticles()));
+		listeArticles.addListSelectionListener(new MyListSelectionListener(frame, intitule, ref, prix, label_2, label_3));
+		btnAjouterUnArticle.addActionListener(new MyActionListener());
+		
+		/*
+		 * Ajout de tous les composants dans la fenetre
+		 */
+		frame.getContentPane().add(methodeTriArticles);
 		frame.getContentPane().add(triArticles);
-		
-		System.out.println(articles.isEmpty());
-		
-		/*JList<Object> list = new JList<Object>(articles.getArticles().toArray());
-		list.setBounds(309, 78, 1, 1);
-		frame.getContentPane().add(list);*/
-		
-		String array[] = {"taras", "tarasdemerde"};	
-		JList l2 = new JList(array);
-		l2.setVisible(true);
-		l2.setBounds(309, 78, 1, 1);
-		frame.getContentPane().add(l2);
+		frame.getContentPane().add(listeArticles);
+		frame.getContentPane().add(this.ref);
+		frame.getContentPane().add(this.intitule);
+		frame.getContentPane().add(this.prix);
+		frame.getContentPane().add(label_2);
+		frame.getContentPane().add(label_3);
+		frame.getContentPane().add(btnAjouterUnArticle);
 	}
 	
 	/*
@@ -127,5 +173,10 @@ public class Magasin {
 		articles.ajouterArticle(t3);
 		articles.ajouterArticle(c1);
 		articles.ajouterArticle(c2);
+	}
+	
+	public void changeTriArticles(String newItemSelected, List<Article> articlesSorted) {
+		methodeTriArticles.setSelectedItem(newItemSelected);
+		listeArticles.setListData(articlesSorted.toArray());
 	}
 }

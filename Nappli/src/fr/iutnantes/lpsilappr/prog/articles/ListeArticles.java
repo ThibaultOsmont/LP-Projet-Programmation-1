@@ -1,16 +1,13 @@
 package fr.iutnantes.lpsilappr.prog.articles;
 
-import fr.iutnantes.lpsilappr.prog.articles.comparateur.Comparateur;
-
-import java.util.List;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
+import java.util.List;
 
-import static java.util.Comparator.comparing;
-
-import java.io.FileWriter;
-import java.io.IOException;
+import fr.iutnantes.lpsilappr.prog.articles.comparateur.Comparateur;
 
 public class ListeArticles {
 	
